@@ -28,7 +28,10 @@ class LaravelSisowServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
+		$this->app['sisow'] = $this->app->share(function($app)
+        {
+            return new Sisow;
+        });
 	}
 
 	/**
@@ -38,7 +41,7 @@ class LaravelSisowServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array();
+		return array('sisow');
 	}
 
 }

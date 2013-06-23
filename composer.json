@@ -1,6 +1,7 @@
 {
     "name": "vjanssens/laravel-sisow",
-    "description": "",
+    "description": "Easy iDeal payments via Sisow Payment Service Provider.",
+    "license": "MIT",
     "authors": [
         {
             "name": "Vadiem Janssens",
@@ -12,9 +13,6 @@
         "illuminate/support": "4.0.x"
     },
     "autoload": {
-        "classmap": [
-            "src/migrations"
-        ],
         "psr-0": {
             "Vjanssens\\LaravelSisow": "src/"
         }
