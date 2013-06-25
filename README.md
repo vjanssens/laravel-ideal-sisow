@@ -1,9 +1,10 @@
-# Easy iDeal payments via Sisow (Laravel 4 package)
+## Easy iDeal payments via Sisow
+### Laravel 4 package
 
 This package is in active development.
 
-## Installation
-Paste these files inside /vendor/vjanssens/laravel-sisow
+### Installation
+Paste these files inside your Laravel 4 `/vendor/vjanssens/laravel-sisow`
 
 Add your MerchantID and MerchantKey to Sisow.php in the package.
 
@@ -30,13 +31,13 @@ Add the next two lines in app/config/app.php
 
 After installation, run `composer dump-autoload`.
 
-## Request banks
+### Request banks
 ```php
 $banks = Sisow::getBanks();
 echo $banks;
 ```
 
-## Request a payment URL
+### Request a payment URL
 ```php
 $args = array(
 
@@ -54,12 +55,13 @@ $args = array(
 
 $paymentURL = Sisow::getPaymentURL($args);
 
+echo '<pre>';
 dd($paymentURL);
 
 //return Redirect::to($paymentURL['url']);
 ```
 
-## Get status of transaction (after payment)
+### Get status of transaction (after payment)
 ```php
 $transactionId = Input::get('trxid');
 
