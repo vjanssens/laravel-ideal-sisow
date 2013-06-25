@@ -252,23 +252,4 @@ class SisowAPI
 	}
 }
 
-/*$t = new Sisow("2537278813", "f1bcac04ef461e7a84757e6394ba205b1f63936e");
-$select = "";
-$t->DirectoryRequest($select); // $select wordt gevuld met array("01" => "ABN Amro Bank", "02" => "ASN Bank", ...)
-$t->DirectoryRequest($select, true); // $select wordt gevuld met een dropdown "<select ...><option...>...</select>"
-$t->issuerId = "10";
-$t->purchaseId = "20110329001";
-$t->description = "Bestelling 20110329001";
-$t->amount = 3.44;
-$t->notifyUrl = "http://...";		// Verwerkings URL; niet verplicht, kan ook via returnURL
-$t->returnUrl = "http://...";		// Success URL
-$t->cancelUrl = "http://...";		// Niet Success URL; niet aanwezig, dan wordt returnURL hiervoor gebruikt
-$t->TransactionRequest();
-$t->StatusRequest();
-$t->StatusRequest("0050000715466154");
-if ($t->status == Sisow::statusSuccess)
-{
-	echo "Gelukt";
-}*/
-
 ?>

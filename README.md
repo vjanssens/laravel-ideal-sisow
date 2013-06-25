@@ -4,32 +4,42 @@
 This package is in active development.
 
 ### Installation
-Paste these files inside your Laravel 4 `/vendor/vjanssens/laravel-sisow`
 
-Add your MerchantID and MerchantKey to Sisow.php in the package.
+Require the package via Composer in your composer.json.
 
-Add the next two lines in app/config/app.php
+```json
+
+"require": {
+	...
+	"vjanssens/laravel-sisow": "dev-master"
+},
+
+```
+
+Run the next line to update dependencies (and thus download this package)
+
+`php composer.phar update`
+
+After Composer has succesfully updated the dependencies proceed to add your MerchantID and MerchantKey to 
+`/vendor/vjanssens/laravel-sisow/src/Vjanssens/LaravelSisow/Sisow.php`
+
+Finally add the next two lines in `/app/config/app.php`
 ```php
 // File: app/config/app.php
 
 'providers' => array(
-
     ...
-
     'Vjanssens\LaravelSisow\LaravelSisowServiceProvider',
 
 ),
 
 'aliases' => array(
-
 	...
-
 	'Sisow'			  => 'Vjanssens\LaravelSisow\Facades\Sisow',
-
 ),
 ```
 
-After installation, run `composer dump-autoload`.
+The package has been isntalled and you are ready to accept iDeal payments.
 
 ### Request banks
 ```php
