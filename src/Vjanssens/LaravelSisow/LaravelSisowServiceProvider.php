@@ -18,7 +18,11 @@ class LaravelSisowServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
+
 		$this->package('vjanssens/laravel-sisow');
+
+		$app = $this->app;
+		
 	}
 
 	/**
@@ -30,7 +34,7 @@ class LaravelSisowServiceProvider extends ServiceProvider {
 	{
 		$this->app['sisow'] = $this->app->share(function($app)
         {
-            return new Sisow;
+            return new Sisow($app['config']);
         });
 	}
 
